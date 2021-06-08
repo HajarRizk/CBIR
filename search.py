@@ -4,6 +4,7 @@ import MeanColor
 import EdgeDescriptor
 import Searcher
 import cv2
+from matplotlib import pyplot as plt
 
 
 
@@ -14,10 +15,10 @@ mc = MeanColor.MeanColor()
 edge = EdgeDescriptor.Edge()
 
 #loading the query image and describe it
-query1 = cv2.imread("queries/cdmc953.jpg") #path of the uploaded picture
+query1 = cv2.imread("queries/a140032.jpg") #path of the uploaded picture
 query = cv2.resize(query1,(300,300))
 cv2.imshow("Query",query)
-Method = "MeanColor"  #Method taken from user
+Method = "ColorDescriptor" #Method taken from user
 
 #performing the search Methods: 1:"MeanColor"->DB:index.csv 2:"ColorDescriptor"->DB:index_MeanColor.csv 3:"Edge"->DB:'index_edge.csv'
 if Method=="ColorDescriptor":
