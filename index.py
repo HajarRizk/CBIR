@@ -8,7 +8,7 @@ import glob
 import cv2
 
 #Initializing our color descriptor
-cd = ColorDescriptor.ColorDescriptor((8,12,13))
+cd = ColorDescriptor.ColorDescriptor((16,16,16))
 
 #open the output index file for writing
 output = open("index.csv","w")

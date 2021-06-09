@@ -4,18 +4,18 @@ import MeanColor
 import EdgeDescriptor
 import Searcher
 import cv2
-from matplotlib import pyplot as plt
+
 
 
 
 
 #intializing the color descriptor
-cd = ColorDescriptor.ColorDescriptor((8,12,3))
+cd = ColorDescriptor.ColorDescriptor((16,16,16))
 mc = MeanColor.MeanColor()
 edge = EdgeDescriptor.Edge()
 
 #loading the query image and describe it
-query1 = cv2.imread("queries/a140032.jpg") #path of the uploaded picture
+query1 = cv2.imread("queries/9555824387_32b151e9b0_m.jpg") #path of the uploaded picture
 query = cv2.resize(query1,(300,300))
 cv2.imshow("Query",query)
 Method = "ColorDescriptor" #Method taken from user
